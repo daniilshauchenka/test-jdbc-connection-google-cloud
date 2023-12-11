@@ -30,7 +30,7 @@ public class HelloServlet extends HttpServlet {
             connection.close();
         } catch (ClassNotFoundException | SQLException e) {
 
-            out.println("Connection failed! Error: " + e.getMessage());
+            out.println("Connection failed! Error: " + e);
         }
     }
 
