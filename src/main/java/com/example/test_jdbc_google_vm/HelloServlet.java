@@ -20,9 +20,9 @@ public class HelloServlet extends HttpServlet {
         String user = "dev";
         String password = "!1Aarootroot";
         PrintWriter out = response.getWriter();
-        out.println("trying with com.mysql.jdbc.Driver google");
+        out.println("trying with com.mysql.cj.jdbc.Driver google");
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(url, user, password);
 
 
