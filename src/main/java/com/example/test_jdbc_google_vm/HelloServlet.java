@@ -19,16 +19,17 @@ public class HelloServlet extends HttpServlet {
         String url = "jdbc:mysql://34.118.53.210:3306/trackerDB";
         String user = "dev";
         String password = "!1Aarootroot";
-
+        PrintWriter out = response.getWriter();
+        out.println("trying with com.mysql.jdbc.Driver google");
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection(url, user, password);
 
-            PrintWriter out = response.getWriter();
+
             out.println("Connected to the database "+url+"!");
             connection.close();
         } catch (ClassNotFoundException | SQLException e) {
-            PrintWriter out = response.getWriter();
+
             out.println("Connection failed! Error: " + e.getMessage());
         }
     }
