@@ -16,7 +16,7 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String url = "jdbc:mysql://10.186.0.5:3306/trackerDB";
+        String url = "jdbc:mysql://34.118.53.210:3306/trackerDB";
         String user = "dev";
         String password = "!1Aarootroot";
 
